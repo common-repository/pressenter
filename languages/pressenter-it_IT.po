@@ -1,0 +1,240 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Pressenter\n"
+"POT-Creation-Date: 2020-09-02 17:46+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Michele Roncaglione Tet <michele.roncaglione@10100.to>\n"
+"Language-Team: 10100 Team <l10n@10100.to>\n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: languages/poedit.unused.php\n"
+"X-Poedit-SearchPathExcluded-0: 10100\n"
+
+#: includes/Main.class.php:119 includes/Main.class.php:120
+msgid "PressEnter"
+msgstr "PressEnter"
+
+#: includes/Main.class.php:130 includes/Main.class.php:131
+#: admin/partials/presentations.phtml:4
+msgid "Presentations"
+msgstr "Presentazioni"
+
+#: includes/Main.class.php:139 includes/Main.class.php:140
+msgid "Back to slides"
+msgstr "Torna alle diapositive"
+
+#: includes/Main.class.php:151 includes/Main.class.php:152
+#: admin/partials/presentations.phtml:6
+msgctxt "presentation"
+msgid "Add new"
+msgstr "Aggiungi nuova"
+
+#: includes/PresentationsTable.class.php:7 includes/SlidesTable.class.php:9
+msgid "presentation"
+msgstr "presentazione"
+
+#: includes/PresentationsTable.class.php:8 includes/SlidesTable.class.php:10
+msgid "presentations"
+msgstr "presentazioni"
+
+#: includes/PresentationsTable.class.php:14
+#: admin/partials/edit-presentation.phtml:59
+msgid "Slides"
+msgstr "Diapositive"
+
+#: includes/PresentationsTable.class.php:18 includes/SlidesTable.class.php:18
+#: admin/partials/edit-presentation.phtml:40
+#: admin/partials/new-presentation.phtml:9
+msgid "Title"
+msgstr "Titolo"
+
+#: includes/PresentationsTable.class.php:19 includes/SlidesTable.class.php:19
+msgid "Author"
+msgstr "Autore"
+
+#: includes/PresentationsTable.class.php:21 includes/SlidesTable.class.php:20
+msgid "Date"
+msgstr "Data"
+
+#: includes/PresentationsTable.class.php:50 includes/SlidesTable.class.php:41
+msgid "Draft"
+msgstr "Bozza"
+
+#: includes/PresentationsTable.class.php:53 includes/SlidesTable.class.php:44
+msgid "Pending review"
+msgstr "In attesa di revisione"
+
+#: includes/PresentationsTable.class.php:74 includes/SlidesTable.class.php:65
+msgid "Edit"
+msgstr "Modifica"
+
+#: includes/PresentationsTable.class.php:75 includes/SlidesTable.class.php:66
+msgctxt "actions"
+msgid "Trash"
+msgstr "Cestina"
+
+#: includes/PresentationsTable.class.php:83 includes/SlidesTable.class.php:74
+#: includes/TableView.class.php:83
+msgid "Restore"
+msgstr "Ripristina"
+
+#: includes/PresentationsTable.class.php:84 includes/SlidesTable.class.php:75
+#: includes/TableView.class.php:84
+msgid "Delete Permanently"
+msgstr "Elimina definitivamente"
+
+#: includes/PresentationsTable.class.php:94 includes/SlidesTable.class.php:85
+msgid "Y/m/d g:i:s a"
+msgstr "d/m/Y H:i:s"
+
+#: includes/PresentationsTable.class.php:97 includes/SlidesTable.class.php:88
+#, php-format
+msgid "%s ago"
+msgstr "%s fa"
+
+#: includes/PresentationsTable.class.php:99 includes/SlidesTable.class.php:90
+msgid "Y/m/d"
+msgstr "d/m/Y"
+
+#: includes/PresentationsTable.class.php:101 includes/SlidesTable.class.php:92
+#: admin/partials/edit-presentation.phtml:23
+msgid "Published"
+msgstr "Pubblicata"
+
+#: includes/PresentationsTable.class.php:101 includes/SlidesTable.class.php:92
+msgid "Last Modified"
+msgstr "Ultima modifica"
+
+#: includes/ShortCode.trait.php:59
+msgid "Presentation title"
+msgstr "Titolo presentazione"
+
+#: includes/TableView.class.php:39
+msgctxt "presentations status group"
+msgid "All"
+msgstr "Tutte"
+
+#: includes/TableView.class.php:43
+msgctxt "presentations status group"
+msgid "Draft"
+msgstr "Bozze"
+
+#: includes/TableView.class.php:46
+msgctxt "presentations status group"
+msgid "Publish"
+msgstr "Pubblicate"
+
+#: includes/TableView.class.php:49
+msgctxt "presentations status group"
+msgid "Pending"
+msgstr "In sospeso"
+
+#: includes/TableView.class.php:52
+msgctxt "presentations status group"
+msgid "Trash"
+msgstr "Cestinate"
+
+#: includes/TableView.class.php:80
+msgid "Move to trash"
+msgstr "Sposta nel cestino"
+
+#: languages/poedit.unused.php:5
+msgid "Web Presentation program"
+msgstr "Programma per presentazioni web"
+
+#: languages/poedit.unused.php:8
+msgid "https://10100.to/wp-plugins/pressenter"
+msgstr "https://10100.to/it/wp-plugins/pressenter"
+
+#: languages/poedit.unused.php:11
+msgid "Simple tool to make presentations"
+msgstr "Semplice strumento per fare presentazioni"
+
+#: languages/poedit.unused.php:14
+msgid "10100"
+msgstr "10100"
+
+#: languages/poedit.unused.php:17
+msgid "https://10100.to"
+msgstr "https://10100.to/it"
+
+#: admin/partials/edit-presentation.phtml:11
+msgid "Presentation"
+msgstr "Presentazione"
+
+#: admin/partials/edit-presentation.phtml:15
+#: admin/partials/edit-presentation.phtml:16
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: admin/partials/edit-presentation.phtml:28
+#: admin/partials/new-presentation.phtml:27
+msgid "Save"
+msgstr "Salva"
+
+#: admin/partials/edit-presentation.phtml:40
+#: admin/partials/new-presentation.phtml:9
+msgid "Required"
+msgstr "Richiesto"
+
+#: admin/partials/edit-presentation.phtml:48
+#: admin/partials/new-presentation.phtml:17
+msgid "Description"
+msgstr "Descrizione"
+
+#: admin/partials/edit-presentation.phtml:61
+msgctxt "slide"
+msgid "Add new"
+msgstr "Aggiungi nuova"
+
+#: admin/partials/edit-presentation.phtml:64
+msgid "Search slides"
+msgstr "Cerca diapositive"
+
+#: admin/partials/new-presentation.phtml:3
+msgid "Add new presentation"
+msgstr "Nuova presentazione"
+
+#: admin/partials/presentations.phtml:9
+msgid "Search presentations"
+msgstr "Cerca presentazioni"
+
+#: public/partials/items/slider.phtml:33
+msgid "Slide"
+msgstr "Diapositiva"
+
+#: public/partials/sections/presentations-list.phtml:13
+msgid "Open"
+msgstr "Apri"
+
+#: public/partials/sections/presentations-list.phtml:17
+#, php-format
+msgid "%s Slides"
+msgstr "%s Diapositive"
+
+#: public/partials/slide.phtml:11
+msgid "Warning"
+msgstr "Attenzione"
+
+#: public/partials/slide.phtml:12
+msgid "content exceeds size of the slide"
+msgstr "il contenuto supera le dimensioni della diapositiva"
+
+#~ msgctxt "pressenter"
+#~ msgid "Draft"
+#~ msgstr "Bozza"
+
+#~ msgctxt "slide status"
+#~ msgid "Draft"
+#~ msgstr "Bozza"
+
+#~ msgid "Name"
+#~ msgstr "Nome"

@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+
+/* ----------------------------------------------------- Misc */
+
+[class^="pe-"],
+[id^="pe-"] {
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+}
+.full-width {
+	width: 100%;
+	max-width: 100%;
+}
+.flex-grow { flex-grow: 1; }
+
+/* ----------------------------------------------------- Columns */
+
+.pe_col_container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.pe_col_container:not(.margin) {
+	max-width: 100%;
+}
+.pe_col_container.margin {
+	width: calc(100% + 16px);
+	margin: -8px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.pe_col_container.margin .pe_col {
+	padding: 8px;
+}
+
+/* ----------------------------------------------------- Presentation settings */
+
+#presentation-settings-header button {
+	min-height: 30px;
+	margin: 0 !important;
+	top: 0 !important;
+	display: flex;
+	align-items: center;
+}
+#presentation-settings-header .pe_col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#presentation-settings-header #publish:not(.show),
+#presentation-settings-header #save:not(.show),
+#presentation-settings-wrapper {
+	display: none;
+}
+#presentation-details {
+	font-weight: normal;
+	box-shadow: none;
+}
+#presentation-settings-wrapper .form-table td {
+	padding-right: 0 !important;
+}
+#presentation-settings textarea,
+#presentation-settings input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="reset"]) {
+	width: 100%;
+	max-width: 100%;
+}
+
+/* Loader */
+#presentation-settings .button-loader {
+	display: none;
+}
+#presentation-settings .load .button-loader {
+	display: inline-block;
+	margin-left: 5px;
+	animation: loader 1.5s linear infinite;
+}
+
+/* -----------------------------------------------------  */
+
+.column-slides {
+	width: 5.5em;
+}
+
+.column-slides .dashicons-before {
+	color: #444;
+}
+
+#toplevel_page_pressentation ul li:last-child {
+	position: relative;
+}
+
+#toplevel_page_pressentation ul li:last-child a:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 90%;
+	top: 0;
+	left: 5%;
+	border-top: 1px solid #444;
+}
+
+/* ----------------------------------------------------- Animations */
+
+@keyframes loader {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}

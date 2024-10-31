@@ -1,0 +1,31 @@
+<div class="pd-main-wrapper">
+	<div class="pd-boxed-container">
+		<ul class="pd-presentations-list">
+			<?php
+				foreach($termsIDS as $termID) {
+					$slides = $this->getSlides($termID, ['publish']);
+					?>
+					<li id="pd-presentation-<?=$termID?>" class="pd-presentation">
+						<div class="pd-presentation-content">
+							<div class="pd-presentation-header">
+								<span class="pd-loader dashicons dashicons-update-alt"></span>
+								<h4 class="pd-nav open <?=(count($slides) > 0)?'active':''?>" itemprop="slider-title" data-id="<?=$termID?>">
+									<a role="button" tabindex="0" title="<?=__('Open', $this->slug)?>"><?=get_term($termID)->name?></a>
+								</h4>
+							</div>
+							<div class="pd-presentation-meta">
+								<p itemprop="slides-count"><small><?php printf(__("%s Slides", $this->slug), count($slides)) ?></small></p>
+							</div>
+							<?php if(get_term($termID)->description): ?>
+								<div class="pd-presentation-description">
+									<p itemprop="slider-description"><?=get_term($termID)->description?></p>
+								</div>
+							<?php endif; ?>
+						</div>
+					</li>
+					<?php
+				}
+			?>
+		</ul>
+	</div>
+</div>

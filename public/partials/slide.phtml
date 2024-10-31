@@ -1,0 +1,30 @@
+<?php
+	get_header();
+	global $post, $mainPressenter;
+?>
+<!-- Warning -->
+<div id="pd-warning">
+	<!-- Warning header -->
+	<div id="pd-warning-header">
+		<div class="pd-flex-grow">
+			<p>
+				<strong style="color: red"><?=__('Warning', $mainPressenter->slug)?>:</strong>
+				<?=__('content exceeds size of the slide', $mainPressenter->slug)?>
+			</p>
+		</div>
+		<div class="pd-warning-trigger"><span class="dashicons dashicons-no-alt"></span></div>
+	</div>
+	<!-- Slide thumb -->
+	<div id="pd-slide-thumb">
+		<!-- Elastic -->
+		<div class="pd-elastic">
+			<!-- Slide -->
+			<div class="pd-slide dummy" style="<?=$mainPressenter->getSlideBg($post->ID)?>">
+				<div class="pd-slide-wrapper">
+					<div class="pd-slide-content"><?=$post->post_content?></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<?php get_footer(); ?>

@@ -1,0 +1,68 @@
+<!--10100-->
+<div class="wrap">
+	<form id="presentation-settings" class="full-width" method="post" onsubmit="return pressenter.savePresentation(this)">
+		<input type="hidden" name="action" value="savePresentation">
+		<input type="hidden" id="presentation-id" name="presentation-id" value="<?=$presentation->term_id?>">
+		<?=wp_nonce_field('savePresentation', 'pressenterNonce'); ?>
+		<!-- Header -->
+		<div id="presentation-settings-header" class="full-width">
+			<div class="pe_col_container margin">
+				<div class="pe_col">
+					<h1 class="wp-heading-inline"><?=__('Presentation', 'pressenter').' - '.$presentation->name?></h1>
+				</div>
+				<div class="pe_col">
+					<button id="presentation-details" class="page-title-action">
+						<span><?=__('Settings', 'pressenter')?></span>
+						<span class="dashicons-before dashicons-arrow-down" title="<?=__('Settings', 'pressenter')?>"></span>
+					</button>
+				</div>
+				<div class="pe_col flex-grow"></div>
+				<div id="publish" class="pe_col">
+					<label>
+						<input name="presentation-status" type="hidden" id="presentation-status" value="draft">
+						<input name="presentation-status" <?=$presentation->noDraft?> type="checkbox" id="presentation-status" value="publish"><?=__('Published', 'pressenter')?>
+					</label>
+				</div>
+				<div id="save" class="pe_col">
+					<button type="submit" name="save-presentation" id="save-presentation" class="button button-primary">
+						<span><?=__('Save', 'pressenter')?></span>
+						<span class="dashicons dashicons-update button-loader"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- Wrapper -->
+		<div id="presentation-settings-wrapper" class="full-width">
+			<table class="form-table full-width" role="presentation">
+				<tbody>
+					<tr class="form-field form-required">
+						<th scope="row">
+							<label for="title"><?=__('Title', 'pressenter')?><span class="description">(<?=__('Required', 'pressenter')?>)</span></label>
+						</th>
+						<td>
+							<input type="text" name="title" id="title" value="<?=$presentation->name?>" aria-required="true" required="">
+						</td>
+					</tr>
+					<tr class="form-field form-required">
+						<th scope="row">
+							<label for="title"><?=__('Description', 'pressenter')?><span class="description"></span></label>
+						</th>
+						<td>
+							<textarea name="description" id="description" rows="10" aria-required="true"><?=$presentation->description?></textarea>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</form>
+	<hr />
+	<h1 class="wp-heading-inline"><?=__('Slides', 'pressenter')?></h1>
+	<a href="<?=add_query_arg(['post_type' => \Pressenter\SLIDE_SLUG, 'parent' => $id], admin_url('post-new.php'))?>" class="page-title-action">
+	<?=_x('Add new', 'slide', 'pressenter')?>
+	</a>
+	<form id="slides-list-form" method="post">
+		<?=$slides->search_box(__('Search slides', 'pressenter'), 'search_id')?>
+		<?=$slides->views()?>
+		<?=$slides->display()?>
+	</form>
+</div>

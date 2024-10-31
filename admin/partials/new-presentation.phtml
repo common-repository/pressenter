@@ -1,0 +1,28 @@
+<!--10100-->
+<div class="wrap">
+	<h1 class="wp-heading-inline"><?=__('Add new presentation', 'pressenter')?></h1>
+	<form id="add-new-presentataion" method="post" onsubmit="return pressenter.savePresentation(this)">
+		<table class="form-table" role="presentation">
+			<tbody>
+				<tr class="form-field form-required">
+					<th scope="row">
+						<label for="title"><?=__('Title', 'pressenter')?><span class="description">(<?=__('Required', 'pressenter')?>))</span></label>
+					</th>
+					<td>
+						<input type="text" name="title" id="title" value="" aria-required="true" required>
+					</td>
+				</tr>
+				<tr class="form-field form-required">
+					<th scope="row">
+						<label for="title"><?=__('Description', 'pressenter')?><span class="description"></span></label>
+					</th>
+					<td>
+						<textarea name="description" id="description" rows="10" aria-required="true"></textarea>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<input type="hidden" name="action" value="savePresentation">
+		<?=wp_nonce_field('savePresentation', 'pressenterNonce'); ?>
+		<input type="submit" name="add-new" id="add-new" class="button button-primary" value="<?=__('Save', 'pressenter')?>">
+	</form>

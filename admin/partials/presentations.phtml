@@ -1,0 +1,13 @@
+<!--10100-->
+<!-- https://wordpress.stackexchange.com/questions/223552/how-to-create-custom-filter-options-in-wp-list-table -->
+<div class="wrap">
+	<h1 class="wp-heading-inline"><?=__('Presentations', 'pressenter')?></h1>
+	<a href="?page=new-pressentation" class="page-title-action">
+	<?=_x('Add new', 'presentation', 'pressenter')?>
+	</a>
+	<form id="pressentations-list-form" method="post">
+		<?=$presentations->search_box(__('Search presentations', 'pressenter'), 'search_id')?>
+		<?=$presentations->views()?>
+		<?=$presentations->display()?>
+	</form>
+</div>

@@ -1,0 +1,39 @@
+<?php global $mainPressenter; ?>
+
+<!-- Elastic -->
+<div class="pd-elastic">
+	<!-- Slider -->
+	<div id="pd-slider">
+		<!-- Slider header -->
+		<div id="pd-slider-header" class="pd-slider-row">
+			<div class="pd-flex-grow">
+				<p><strong><?=$presTitle?></strong> - <span itemprop="slide-title"><?=get_the_title($slides[0]->ID);?></span></p>
+			</div>
+			<div class="pd-nav close <?=($context!='preview')?'active':''?>"><span class="dashicons dashicons-no-alt"></span></div>
+		</div>
+		<!-- Slides truck -->
+		<div id="pd-slides-truck">
+			<?php
+				$s = 1;
+				foreach($slides as $slide) {
+					?>
+					<!-- Slide -->
+					<div id="pd-slide-<?=$slide->ID?>" class="pd-slide" style="<?=$mainPressenter->getSlideBg($slide->ID)?>" data-slide-number="<?=$s++?>" data-slide-title="<?=get_the_title($slide->ID);?>">
+						<div class="pd-slide-wrapper">
+							<div class="pd-slide-content"><?=$slide->post_content?></div>
+						</div>
+					</div>
+					<?php
+				}
+			?>
+		</div>
+		<!-- Slider footer -->
+		<div id="pd-slider-footer" class="pd-slider-row">
+			<div class="pd-flex-grow">
+				<p><?=__('Slide', $mainPressenter->slug)?> <span itemprop="slide-number">1</span></p>
+			</div>
+			<div class="pd-nav prev"><span class="dashicons dashicons-arrow-left-alt2"></span></div>
+			<div class="pd-nav next <?=(count($slides) > 1)?'active':''?>"><span class="dashicons dashicons-arrow-right-alt2"></span></div>
+		</div>
+	</div>
+</div>
